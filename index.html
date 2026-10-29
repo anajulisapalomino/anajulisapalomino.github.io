@@ -13,6 +13,9 @@
       li > span:nth-child(2) { display: flex; flex-direction: column; gap: 2px; }
       li > span:nth-child(2) > i { margin-bottom: 2px; line-height: 1.35; }
       [data-sep] { display: none; }
+      [data-head] { align-items: flex-start !important; }
+      [data-head], [data-head] * { text-align: left !important; }
+      [data-nav] { justify-content: flex-start !important; }
     }
     html { scroll-behavior: smooth; }
 </style>
@@ -22,7 +25,7 @@
   <div style="max-width: 760px; width: 100%;">
 
     <div data-sticky="" style="position: sticky; top: 0; z-index: 10; background: oklch(98.5% 0.008 300); padding-top: clamp(28px, 6vw, 64px); margin-top: calc(-1 * clamp(28px, 6vw, 64px));">
-      <div style="display: flex; flex-direction: column; align-items: center; gap: 4px; margin-bottom: clamp(24px, 5vw, 40px); text-align: center;">
+      <div data-head="" style="display: flex; flex-direction: column; align-items: center; gap: 4px; margin-bottom: clamp(24px, 5vw, 40px); text-align: center;">
         
         <div>
           <h1 style="font-size: clamp(28px, 7vw, 40px); text-wrap: balance; margin: 0 0 6px 0; font-weight: normal; color: oklch(30% 0.05 300); text-align: left">Ana Julisa Palomino Cabrera</h1>
@@ -33,7 +36,7 @@
         </div>
       </div>
 
-      <nav style="font-family: system-ui, sans-serif; font-size: 15px; margin-bottom: clamp(24px, 5vw, 36px); display: flex; flex-wrap: wrap; justify-content: center; gap: 8px clamp(18px, 5vw, 56px); border-top: 1px solid oklch(88% 0.02 300); border-bottom: 1px solid oklch(88% 0.02 300); padding: 12px 0;">
+      <nav data-nav="" style="font-family: system-ui, sans-serif; font-size: 15px; margin-bottom: clamp(24px, 5vw, 36px); display: flex; flex-wrap: wrap; justify-content: center; gap: 8px clamp(18px, 5vw, 56px); border-top: 1px solid oklch(88% 0.02 300); border-bottom: 1px solid oklch(88% 0.02 300); padding: 12px 0;">
         <a href="#publicaciones" style="font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; font-size: clamp(16px, 4.2vw, 20px); letter-spacing: 1px; text-transform: uppercase;">Publications</a>
         <a href="#talks" style="font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; font-size: clamp(16px, 4.2vw, 20px); letter-spacing: 1px; text-transform: uppercase;">Talks</a>
         <a href="#organizer" style="font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; font-size: clamp(16px, 4.2vw, 20px); letter-spacing: 1px; text-transform: uppercase;">Organizer</a>
