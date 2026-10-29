@@ -13,9 +13,16 @@
       li > span:nth-child(2) { display: flex; flex-direction: column; gap: 2px; }
       li > span:nth-child(2) > i { margin-bottom: 2px; line-height: 1.35; }
       [data-sep] { display: none; }
-      [data-head] { align-items: flex-start !important; }
-      [data-head], [data-head] * { text-align: left !important; }
-      [data-nav] { flex-direction: column !important; align-items: flex-start !important; gap: 10px !important; }
+      [data-head] { align-items: center !important; }
+      [data-head], [data-head] * { text-align: center !important; }
+      [data-head] p + div { justify-content: center !important; }
+      [data-nav] { flex-direction: column !important; align-items: stretch !important; gap: 0 !important; padding: 0 !important; }
+      [data-nav] > a { text-align: center; padding: 12px 0; border-bottom: 1px solid oklch(88% 0.02 300); }
+      [data-nav] > a:last-child { border-bottom: none; }
+      [data-menu-btn] { display: flex !important; }
+      [data-nav] { display: none !important; border-top: none !important; }
+      #menu-toggle:checked ~ [data-nav] { display: flex !important; }
+      #menu-toggle:not(:checked) ~ [data-menu-btn] { margin-bottom: 28px; }
     }
     html { scroll-behavior: smooth; }
 </style>
@@ -36,6 +43,8 @@
         </div>
       </div>
 
+      <input type="checkbox" id="menu-toggle" style="display: none;">
+      <label for="menu-toggle" data-menu-btn="" style="display: none; justify-content: center; align-items: center; gap: 10px; cursor: pointer; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; font-size: 18px; letter-spacing: 1px; text-transform: uppercase; color: oklch(52% 0.13 300); border-top: 1px solid oklch(88% 0.02 300); border-bottom: 1px solid oklch(88% 0.02 300); padding: 12px 0; user-select: none;"><span style="font-size: 22px; line-height: 1;">☰</span><span>Menu</span></label>
       <nav data-nav="" style="font-family: system-ui, sans-serif; font-size: 15px; margin-bottom: clamp(24px, 5vw, 36px); display: flex; flex-wrap: wrap; justify-content: center; gap: 8px clamp(18px, 5vw, 56px); border-top: 1px solid oklch(88% 0.02 300); border-bottom: 1px solid oklch(88% 0.02 300); padding: 12px 0;">
         <a href="#publicaciones" style="font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; font-size: clamp(16px, 4.2vw, 20px); letter-spacing: 1px; text-transform: uppercase;">Publications</a>
         <a href="#talks" style="font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; font-size: clamp(16px, 4.2vw, 20px); letter-spacing: 1px; text-transform: uppercase;">Talks</a>
@@ -49,6 +58,10 @@
 <section id="publicaciones" style="margin-bottom: 44px; scroll-margin-top: 220px;">
       <h2 style="font-size: clamp(16px, 4.2vw, 20px); font-weight: bold; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; text-transform: uppercase; color: oklch(35% 0.06 300); border-bottom: 2px solid oklch(80% 0.05 300); padding-bottom: 8px; margin-bottom: 20px;"><b>Publications &amp; Preprints</b></h2>
       <ol style="list-style: none; margin: 0; padding: 0; counter-reset: pub;">
+        <li style="counter-increment: pub; display: flex; gap: 14px; margin-bottom: 18px; font-family: system-ui, sans-serif; font-size: 15px; line-height: 1.55; color: oklch(30% 0.02 300);">
+          <span style="color: oklch(55% 0.1 300); font-variant-numeric: tabular-nums; flex: none; min-width: 20px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; font-size: clamp(16px, 4vw, 19px);">4.</span>
+          <span><i style="font-style: italic; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; font-size: clamp(16px, 4.2vw, 20px);">Quotients of Calabi–Yau Generalized Fermat manifolds and Log Enriques varieties</i><span data-sep="" style="font-family: 'Courier New', monospace; color: oklch(0.52 0.13 300); font-size: clamp(14px, 3.6vw, 16px);">&nbsp;·&nbsp;</span><span style="font-family: 'Courier New', monospace; color: oklch(0.52 0.13 300); font-size: clamp(14px, 3.6vw, 16px);">with S. Billi, A. Sarti</span><span data-sep="" style="color: oklch(0.52 0.13 300); font-family: 'Courier New', monospace; font-size: clamp(14px, 3.6vw, 16px);">&nbsp;·&nbsp;</span><a href="https://arxiv.org/abs/2610.21752" target="_blank" style="font-family: 'Courier New', monospace; font-size: clamp(14px, 3.6vw, 16px); color: oklch(0.52 0.02 300);">arXiv:2610.21752</a></span>
+        </li>
         <li style="counter-increment: pub; display: flex; gap: 14px; margin-bottom: 18px; font-family: system-ui, sans-serif; font-size: 15px; line-height: 1.55; color: oklch(30% 0.02 300);">
           <span style="color: oklch(55% 0.1 300); font-variant-numeric: tabular-nums; flex: none; min-width: 20px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; font-size: clamp(16px, 4vw, 19px);">3.</span>
           <span><i style="font-style: italic; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; font-size: clamp(16px, 4.2vw, 20px);">Automorphism groups of rigid complete intersections</i><span data-sep="" style="font-family: 'Courier New', monospace; color: oklch(0.52 0.13 300); font-size: clamp(14px, 3.6vw, 16px);">&nbsp;·&nbsp;</span><span style="font-family: 'Courier New', monospace; color: oklch(0.52 0.13 300); font-size: clamp(14px, 3.6vw, 16px);">with <a href="https://georgyduque.github.io" target="_blank" style="color: oklch(0.52 0.13 300);">J. Duque Franco</a>, <a href="http://mail-inst-mat.utalca.cl/~aliendo/" target="_blank" style="color: oklch(0.52 0.13 300);">A. Liendo</a></span><span data-sep="" style="color: oklch(0.52 0.13 300); font-family: 'Courier New', monospace; font-size: clamp(14px, 3.6vw, 16px);">&nbsp;·&nbsp;</span><a href="https://arxiv.org/abs/2607.12139" target="_blank" style="font-family: 'Courier New', monospace; font-size: clamp(14px, 3.6vw, 16px); color: oklch(0.52 0.02 300);">arXiv:2607.12139</a></span>
