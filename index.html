@@ -22,7 +22,8 @@
       section { display: none; }
       section:target { display: block; }
       body:has(section:target) [data-nav] { display: none !important; }
-      body:has(section:target) [data-back] { display: block !important; }
+      section h2 { display: flex; justify-content: space-between; align-items: center; }
+      [data-back] { display: inline !important; }
     }
     html { scroll-behavior: smooth; }
 </style>
@@ -35,7 +36,7 @@
       <div data-head="" style="display: flex; flex-direction: column; align-items: center; gap: 4px; margin-bottom: clamp(24px, 5vw, 40px); text-align: center;">
         
         <div>
-          <h1 style="font-size: clamp(28px, 7vw, 40px); text-wrap: balance; margin: 0 0 6px 0; font-weight: normal; color: oklch(30% 0.05 300); text-align: left">Ana Julisa Palomino Cabrera</h1>
+          <h1 style="font-size: clamp(28px, 7vw, 40px); text-wrap: balance; margin: 0 0 6px 0; font-weight: normal; color: oklch(30% 0.05 300); text-align: left"><a href="#" style="color: inherit; text-decoration: none;">Ana Julisa Palomino Cabrera</a></h1>
           <p style="margin: 0; font-size: clamp(14px, 3.6vw, 16px); font-family: 'Courier New', monospace; color: oklch(52% 0.13 300); text-wrap: balance; text-align: center">PhD Student in Mathematics&nbsp;·&nbsp;Instituto de Matemáticas&nbsp;·&nbsp;Universidad de Talca</p>
           <div style="display: flex; gap: 12px; align-items: center; justify-content: space-between; margin-top: 4px; width: 100%;">
             <p style="margin: 0; font-size: 15px; font-family: 'Courier New', monospace; color: oklch(45% 0.02 300); text-align: left"><a href="mailto:ana.palomino@utalca.cl" style="font-size: clamp(14px, 3.6vw, 16px); color: oklch(45% 0.02 300);">ana.palomino@utalca.cl</a></p>
@@ -43,7 +44,6 @@
         </div>
       </div>
 
-      <a href="#" data-back="" style="display: none; text-align: center; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; font-size: 18px; letter-spacing: 1px; text-transform: uppercase; border-top: 1px solid oklch(88% 0.02 300); border-bottom: 1px solid oklch(88% 0.02 300); padding: 12px 0; margin-bottom: 28px;">←&nbsp;&nbsp;Back</a>
       <nav data-nav="" style="font-family: system-ui, sans-serif; font-size: 15px; margin-bottom: clamp(24px, 5vw, 36px); display: flex; flex-wrap: wrap; justify-content: center; gap: 8px clamp(18px, 5vw, 56px); border-top: 1px solid oklch(88% 0.02 300); border-bottom: 1px solid oklch(88% 0.02 300); padding: 12px 0;">
         <a href="#publicaciones" style="font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; font-size: clamp(16px, 4.2vw, 20px); letter-spacing: 1px; text-transform: uppercase;">Publications</a>
         <a href="#talks" style="font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; font-size: clamp(16px, 4.2vw, 20px); letter-spacing: 1px; text-transform: uppercase;">Talks</a>
@@ -55,7 +55,7 @@
 
 <!-- ===== PUBLICATIONS & PREPRINTS ===== -->
 <section id="publicaciones" style="margin-bottom: 44px; scroll-margin-top: 220px;">
-      <h2 style="font-size: clamp(16px, 4.2vw, 20px); font-weight: bold; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; text-transform: uppercase; color: oklch(35% 0.06 300); border-bottom: 2px solid oklch(80% 0.05 300); padding-bottom: 8px; margin-bottom: 20px;"><b>Publications &amp; Preprints</b></h2>
+      <h2 style="font-size: clamp(16px, 4.2vw, 20px); font-weight: bold; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; text-transform: uppercase; color: oklch(35% 0.06 300); border-bottom: 2px solid oklch(80% 0.05 300); padding-bottom: 8px; margin-bottom: 20px;"><b>Publications &amp; Preprints</b><a href="#" data-back="" style="display: none; font-size: 24px; line-height: 1; font-weight: normal; text-decoration: none;">←</a></h2>
       <ol style="list-style: none; margin: 0; padding: 0; counter-reset: pub;">
         <li style="counter-increment: pub; display: flex; gap: 14px; margin-bottom: 18px; font-family: system-ui, sans-serif; font-size: 15px; line-height: 1.55; color: oklch(30% 0.02 300);">
           <span style="color: oklch(55% 0.1 300); font-variant-numeric: tabular-nums; flex: none; min-width: 20px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; font-size: clamp(16px, 4vw, 19px);">4.</span>
@@ -78,7 +78,7 @@
 
 <!-- ===== TALKS (copia un <li>...</li> para agregar una charla) ===== -->
 <section id="talks" style="margin-bottom: 44px; scroll-margin-top: 220px;">
-      <h2 style="font-size: clamp(16px, 4.2vw, 20px); font-weight: bold; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; text-transform: uppercase; color: oklch(35% 0.06 300); border-bottom: 2px solid oklch(80% 0.05 300); padding-bottom: 8px; margin-bottom: 20px;"><b>Talks</b></h2>
+      <h2 style="font-size: clamp(16px, 4.2vw, 20px); font-weight: bold; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; text-transform: uppercase; color: oklch(35% 0.06 300); border-bottom: 2px solid oklch(80% 0.05 300); padding-bottom: 8px; margin-bottom: 20px;"><b>Talks</b><a href="#" data-back="" style="display: none; font-size: 24px; line-height: 1; font-weight: normal; text-decoration: none;">←</a></h2>
       <ol style="list-style: none; margin: 0; padding: 0; counter-reset: talk;">
         <li style="counter-increment: talk; display: flex; gap: 14px; margin-bottom: 18px; font-family: system-ui, sans-serif; font-size: 15px; line-height: 1.55; color: oklch(30% 0.02 300);">
           <span style="color: oklch(55% 0.1 300); font-variant-numeric: tabular-nums; flex: none; min-width: 20px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; font-size: clamp(16px, 4vw, 19px);">10.</span>
@@ -125,7 +125,7 @@
 
 <!-- ===== ORGANIZER ===== -->
 <section id="organizer" style="margin-bottom: 44px; scroll-margin-top: 220px;">
-      <h2 style="font-size: clamp(16px, 4.2vw, 20px); font-weight: bold; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; text-transform: uppercase; color: oklch(35% 0.06 300); border-bottom: 2px solid oklch(80% 0.05 300); padding-bottom: 8px; margin-bottom: 20px;"><b>Organizer</b></h2>
+      <h2 style="font-size: clamp(16px, 4.2vw, 20px); font-weight: bold; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; text-transform: uppercase; color: oklch(35% 0.06 300); border-bottom: 2px solid oklch(80% 0.05 300); padding-bottom: 8px; margin-bottom: 20px;"><b>Organizer</b><a href="#" data-back="" style="display: none; font-size: 24px; line-height: 1; font-weight: normal; text-decoration: none;">←</a></h2>
       <ol style="list-style: none; margin: 0; padding: 0; counter-reset: org;">
         <li style="counter-increment: org; display: flex; gap: 14px; margin-bottom: 18px; font-family: system-ui, sans-serif; font-size: 15px; line-height: 1.55; color: oklch(30% 0.02 300);">
           <span style="color: oklch(55% 0.1 300); font-variant-numeric: tabular-nums; flex: none; min-width: 20px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; font-size: clamp(16px, 4vw, 19px);">3.</span>
@@ -144,7 +144,7 @@
 
 <!-- ===== TEACHING ===== -->
 <section id="catedra" style="scroll-margin-top: 220px;">
-      <h2 style="font-size: clamp(16px, 4.2vw, 20px); font-weight: bold; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; text-transform: uppercase; color: oklch(35% 0.06 300); border-bottom: 2px solid oklch(80% 0.05 300); padding-bottom: 8px; margin-bottom: 20px;"><b>Teaching</b></h2>
+      <h2 style="font-size: clamp(16px, 4.2vw, 20px); font-weight: bold; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; text-transform: uppercase; color: oklch(35% 0.06 300); border-bottom: 2px solid oklch(80% 0.05 300); padding-bottom: 8px; margin-bottom: 20px;"><b>Teaching</b><a href="#" data-back="" style="display: none; font-size: 24px; line-height: 1; font-weight: normal; text-decoration: none;">←</a></h2>
       <ol style="list-style: none; margin: 0; padding: 0; counter-reset: cla;">
         <li style="counter-increment: cla; display: flex; gap: 14px; margin-bottom: 18px; font-family: system-ui, sans-serif; font-size: 15px; line-height: 1.55; color: oklch(30% 0.02 300);">
           <span style="color: oklch(55% 0.1 300); font-variant-numeric: tabular-nums; flex: none; min-width: 20px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; font-size: clamp(16px, 4vw, 19px);">3.</span>
